@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rampart+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@200;400;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+.header {
+  min-height: 85vh;
+  width: 100%;
+  background-image: url("ourprojects.gif");
+  background-size: cover;
+  font-family: cursive;
+}
+
+/* --------------- Navigation section  -------------*/
+
+nav {
+  height: 80px;
+  width: 100%;
+ 
+    position: sticky;
+}
+label.logo {
+  font-family:'Abril Fatface',cursive;
+  background: -webkit-linear-gradient(#ffffff,#ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 40px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+.logo span {
+  color: rgb(8, 248, 8);
+}
+nav ul {
+  float: right;
+  margin-right: 50px;
+}
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a {
+  color: white;
+  font: 16px/24px D-DIN-Medium,Arial,Verdana,sans-serif;
+  text-transform: uppercase;
+    font-weight: 700;
+    font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  padding: 7px 13px;
+  border-radius: 3px;
+}
+a.active,
+a.underline-hover-effect {
+  text-decoration: none;
+  
+}
+
+.underline-hover-effect {
+  
+  padding-bottom: 0.9rem; /* defines the space between text and underline */
+  position: relative;
+}
+
+.underline-hover-effect::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgb(211, 222, 230);
+  transition: width 0.05s ease-out;
+}
+.underline-hover-effect:hover::before {
+  width: 100%;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+@media (max-width: 952px) {
+  
+  .header
+{
+ background-position: center;
+}
+
+  label.logo 
+  {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+  .content h1 {
+    font-size: 30px;
+  }
+  .content p {
+    font-size: 20px;
+  }
+}
+
+/* Media Queries For Responsive Page */
+
+@media (max-width: 858px) 
+{
+    .checkbtn {
+      display: block;  
+    }
+    ul {
+      position: fixed;
+      width: 100%;
+      height: 75vh;
+      background: rgb(17, 28, 72);
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all 0.5s;
+      z-index: 1;
+    }
+    nav ul li {
+      display: block;
+      margin: 30px 0;
+      line-height: 30px;
+    }
+    nav ul li a {
+      font-size: 20px;
+    
+    }
+    a:hover,
+    a.active {
+      background: none;
+      color: #0082e6;
+    }
+    #check:checked ~ ul {
+      left: 0;
+    }
+    label .logo {
+      font-size: 30px;
+    }
+    .content h1 {
+      font-size: 25px;
+    }
+    .content p {
+      font-size: 18px;
+    }
+  }
+/* ----------- project Section ------------ */
+.project h1 {
+  font-family: 'Kanit', sans-serif;
+  background: -webkit-linear-gradient(#8e0e00, #1f1c18);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 50px;
+    text-transform: capitalize;
+    text-align: center;
+
+  }
+ 
+ .project__container {
+    /* margin-left: 120px; */
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .box {
+    width: 25%; 
+    padding: 50px;
+    /* padding-left: 10px; */
+    display: block;
+    border:2px solid black;
+    margin: 20px;
+  }
+  .box img {
+    width: 100%;
+    border-radius: 4px;
+  }
+  .box img:hover {
+    transform: scale(1.2, 1.2);
+    transition: 0.3s transform;
+  } 
+  .box .text{
+      text-align: center;
+      font-size: 17px;
+      font-family: 'Kanit', sans-serif;
+      font-weight: 200;
+       margin-top: 20px;
+  }
+  table{
+    justify-items: center;
+    border: collapse;
+    margin:10px 50px;
+  }
+
+  table th{
+   text-align: left; 
+   padding: 4px 30px 4px 8px;
+   border: 1px solid black;
+   background-color:darkslategray;
+   font-size: 18px;
+  }
+
+  table td{
+    border: 1px solid black;
+    padding: 4px 8px;
+  }
+
+  .shital{
+    font-family: 'Kanit', sans-serif;
+    font-weight: 200;
+    text-align: justify;
+    color: black;
+    font-size: 18px;
+    margin:10px 50px;
+  }
+  .cj{
+    font-family: 'Kanit', sans-serif;
+    font-size: large;
+    margin:25px 50px;
+  }
+.sakshi{
+  
+  margin:25px 50px;
+}
+  .preti{
+   height: 200px;
+   width: 600px;
+   margin:25px 50px;
+  }
+
+
+  .capture{
+    height: 400px;
+    width: 600px;
+    margin:25px 50px;
+   }
+
+
+   
+    
+   
+
+   .parent {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  
+  .orange{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 200px;
+    width: 400px;
+    margin:25px 50px;
+  }
+  
+  .meta {
+    position: relative;
+    top: 0;
+    left: 30px;
+    height: 200px;
+    width: 400px;
+    margin:25px 50px;
+   
+  }
+
+
+
+
+
+
+  .ayush{
+    font-family: 'Kanit', sans-serif;
+    font-size: large;
+    margin:25px 50px;
+  }
+
+
+  @media (max-width: 1250px) {
+    .project__container  {
+      flex-direction: column;
+      height: 100%;
+    }
+  }
+
+  @media screen and (max-width: 900px) 
+  {
+    .shital{
+      padding-right: 100px;
+    }
+    .capture
+    {
+      padding-right: 220px;
+
+    }
+    .preti
+    {
+      padding-right: 220px;
+    }
+    .orange
+    {
+      padding-right: 220px;
+    }
+    
+    .meta
+    {
+      padding-right: 220px;
+
+    }
+    
+
+
+  }
+
+  /* ------------ Footer Section ----------- */
+  
+  .footer__section {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 200;
+    width: 100%;
+  }
+  .footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    padding: 20px 0px;
+    /* margin-top: 20px; */
+    justify-content: center;
+  }
+  .footer p {
+    font-size: 10px;
+    text-align: center;
+  }
+  

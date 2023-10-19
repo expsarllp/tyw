@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rampart+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@200;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+.header {
+  min-height: 85vh;
+  width: 100%;
+  background-image: url("about.gif");
+  background-size: cover;
+  
+  font-family: cursive;
+}
+
+/* --------------- Navigation section  -------------*/
+
+nav {
+  height: 80px;
+  width: 100%;
+    position: sticky;
+}
+label.logo {
+  font-family:'Abril Fatface',cursive;
+  background: -webkit-linear-gradient(#ffffff,#ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 40px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+.logo span {
+  color: rgb(8, 248, 8);
+}
+nav ul {
+  float: right;
+  margin-right: 50px;
+}
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a {
+  color: white;
+  font: 16px/24px D-DIN-Medium,Arial,Verdana,sans-serif;
+  text-transform: uppercase;
+    font-weight: 700;
+    font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  padding: 7px 13px;
+  border-radius: 3px;
+}
+a.active,
+a.underline-hover-effect {
+  text-decoration: none;
+  
+}
+
+.underline-hover-effect {
+  
+  padding-bottom: 0.9rem; /* defines the space between text and underline */
+  position: relative;
+}
+
+.underline-hover-effect::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgb(211, 222, 230);
+  transition: width 0.05s ease-out;
+}
+.underline-hover-effect:hover::before {
+  width: 100%;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+.content {
+  width: 90%;
+  color: ivory;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.content h1 {
+  font-size: 35px;
+  color: rgb(11, 255, 11);
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-family: cursive;
+}
+.content p {
+  font-size: 25px;
+  margin-top: 30px;
+  line-height: 30px;
+  text-transform: capitalize;
+  line-height: 40px;
+  font-family: cursive;
+  margin-bottom: 50px;
+}
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+  .content h1 {
+    font-size: 30px;
+  }
+  .content p {
+    font-size: 20px;
+  }
+  .header
+  {
+   background-position: center;
+  }
+}
+
+/* Media Queries For Responsive Page */
+
+@media (max-width: 858px) {
+    .checkbtn {
+      display: block;
+    }
+    ul {
+      position: fixed;
+      width: 100%;
+      height: 75vh;
+      background: rgb(17, 28, 72);
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all 0.5s;
+      z-index: 1;
+    }
+    nav ul li {
+      display: block;
+      margin: 30px 0;
+      line-height: 30px;
+    }
+    nav ul li a {
+      font-size: 20px;
+      background: rgb(2, 36, 61);
+    }
+    a:hover,
+    a.active {
+      background: none;
+      color:black;
+    }
+    #check:checked ~ ul {
+      left: 0;
+    }
+    label .logo {
+      font-size: 30px;
+    }
+    .content h1 {
+      font-size: 25px;
+    }
+    .content p {
+      font-size: 18px;
+    }
+  }
+
+  .about__content {
+    width: 100%;
+      margin: 30px auto;
+      align-items: center;
+      justify-content: space-around;
+      text-align: center;
+      background: rgb(2, 36, 61);
+      color: rgb(245, 241, 241);
+      font-family: 'Kanit', sans-serif;
+
+    }
+  .about__content p{
+    font-family: 'Kanit', sans-serif;
+    font-weight: 200;
+  }
+  .about__content p ol{
+    font-family: 'Kanit', sans-serif;
+    font-weight: 200;
+  }
+
+  .about{
+    background-color: black;
+    font-size: medium;
+
+  }
+
+  
+.wrapper{
+  margin-top: 60px;
+  text-align: center;
+}
+
+.wrapper h1{
+  
+  font-family: 'Kanit', sans-serif;
+  background: -webkit-linear-gradient(#ffffff, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 50px;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.our_team{
+  width: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.our_team .team_member{
+  width: 300px;
+  margin: 5px;
+  background: #fff;
+  padding: 20px 10px;
+}
+.our_team .team_member .baji{
+  font-size: medium;
+}
+.our_team .team_member .member_img{
+  background: #e9e5fa;  
+  max-width: 190px;
+  width: 100%;
+  height: 190px;
+  margin: 0 auto;
+  border-radius: 50%;
+  padding: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.our_team .team_member .member_img img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.our_team .team_member h3{
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  margin: 15px 0 0px;
+}
+
+.our_team .team_member span{
+  font-size: 10px;
+}
+
+.our_team .team_member p{
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.our_team .team_member .member_img .social_media{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: rgba(0,0,0,0.65);
+  width: 95%;
+  height: 95%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+   transition: all 0.5s ease;
+}
+
+.our_team .team_member .member_img .social_media .item{
+  margin: 0 10px;
+}
+
+.our_team .team_member .member_img .social_media .fab{
+  color: #8c7ae6;
+  font-size: 20px;
+}
+
+.our_team .team_member .member_img:hover .social_media{
+  transform: scale(1);
+}
+/* ------------ Footer Section ----------- */
+  
+.footer__section {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 200;
+  width: 100%;
+  }
+  .footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    padding: 20px 0px;
+    /* margin-top: 20px; */
+    justify-content: center;
+  }
+  .footer p {
+    font-size: 10px;
+    text-align: center;
+  }
+  
